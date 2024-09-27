@@ -1,36 +1,63 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Nav() {
+  const location = useLocation();
+  const selectedMenu = "bg-gray-900 font-bold text-white rounded-md";
+
   return (
     <>
       <header className="">
-        <ul className="md:grid lg:flex justify-center md:hidden">
-          <li className="">
-            <Link to="/" aria-label="accueil" className="flex items-center">
+        <ul className="hidden fixed top-[90%] left-[50%] transform -translate-x-1/2 bg-transparent md:flex justify-evenly items-center bg-white">
+          <li
+            className={`flex justify-center w-32 p-3 border-2 border-black rounded-md ${
+              location.pathname === "/" ? selectedMenu : "bg-white"
+            }`}
+          >
+            <Link
+              to="/"
+              aria-label="accueil"
+              className="flex items-center text-xl"
+            >
               <img
-                src="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/home-page-white-icon.png"
-                alt=""
-                className="h-auto w-5"
+                src="src\assets\images\home.png"
+                alt="accueil icon"
+                className="h-auto w-5 mr-2 "
               />
               Accueil
             </Link>
           </li>
-          <li className="">
-            <Link to="/realisation" aria-label="realisation">
+          <li
+            className={`flex justify-center p-3 w-40 mx-5 border-2 border-black rounded-md ${
+              location.pathname === "/realisation" ? selectedMenu : "bg-white"
+            }`}
+          >
+            <Link
+              to="/realisation"
+              aria-label="realisation"
+              className="flex items-center text-xl"
+            >
               <img
-                src="src\assets\images\realisation-icon.png"
-                alt=""
-                className="h-auto w-5"
+                src="src/assets/images/realisation-icon.png"
+                alt="realisation icon"
+                className="h-auto w-5 mr-2"
               />
               Réalisation
             </Link>
           </li>
-          <li className="">
-            <Link to="/contact" aria-label="contact">
+          <li
+            className={`flex justify-center w-32 p-3 border-2 border-black rounded-md ${
+              location.pathname === "/contact" ? selectedMenu : "bg-white"
+            }`}
+          >
+            <Link
+              to="/contact"
+              aria-label="contact"
+              className="flex items-center text-xl"
+            >
               <img
-                src="https://www.pngkey.com/png/full/151-1517814_telefone-do-lab-white-contact-icon-png.png"
-                alt=""
-                className="h-auto w-5"
+                src="src\assets\images\contact.png"
+                alt="contact icon"
+                className="h-auto w-5 mr-2"
               />
               Contact
             </Link>
