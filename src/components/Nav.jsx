@@ -7,7 +7,7 @@ export default function Nav() {
   return (
     <>
       <header className="">
-        <ul className="hidden fixed top-[90%] left-[50%] transform -translate-x-1/2 bg-transparent md:flex justify-evenly items-center bg-white">
+        <ul className="hidden fixed top-[90%] left-[50%] transform -translate-x-1/2 bg-transparent md:flex justify-evenly items-center">
           <li
             className={`flex justify-center w-32 p-3 border-2 border-black rounded-md ${
               location.pathname === "/" ? selectedMenu : "bg-white"
@@ -63,10 +63,10 @@ export default function Nav() {
             </Link>
           </li>
         </ul>
-        <div className="drawer justify-end mr-11 mt-5 ">
+        <div className="drawer fixed left-[26%] top-[2%]  ">
           <input id="my-drawer" type="checkbox" className=" drawer-toggle " />
-          <div className="drawer-content flex items-center justify-center w-[130%] h-[130%] rounded-[15px] bg-[#d3c7b1] shadow-[21px_21px_38px_#a59b8a,-21px_-21px_38px_#fff3d8] md:hidden">
-            <label htmlFor="my-drawer" className="">
+          <div className="drawer-content flex items-center justify-center w-[130%] h-[130%] rounded-[15px] md:hidden">
+            <label htmlFor="my-drawer" className="bg-custom p-2 backdrop-opacity-10 rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

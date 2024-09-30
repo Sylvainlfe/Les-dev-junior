@@ -6,6 +6,13 @@
 
 body {
     font-family: "Red Hat Display", Georgia, 'Times New Roman', Times, serif;
-
+    background-color: hsl(0, 0%, 4.9%);
     height: 100dvh;
+}
+main{
+    background: radial-gradient(91.96% 141.6% at -22.42% 69.4%,rgba(127,0,255,.46) 0,transparent 100%),radial-gradient(84.26% 129.74% at 50% 125.36%,rgba(255,0,230,.46) 0,transparent 100%),radial-gradient(58.7% 90.38% at 113.99% 96.18%,rgba(255,0,107,.43) 0,transparent 100%),radial-gradient(56.68% 87.27% at 27.94% 112.07%,rgba(0,255,224,.43) 0,transparent 100%)
+}
+
+.bg-custom{
+    background: linear-gradient(216.04deg, #ffffff0f 18.89%, #ffffff03 87.3%);
 }
