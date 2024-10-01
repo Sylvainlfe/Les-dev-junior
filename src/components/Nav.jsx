@@ -1,43 +1,72 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Nav() {
+  const location = useLocation();
+  const selectedMenu = "bg-gray-900 font-bold text-white rounded-md";
+
   return (
     <>
-      <header className="z-10 relative">
-        <ul className="md:grid lg:flex items-center justify-evenly ">
-          <Link
-            to="/"
-            aria-label="accueil"
-            className="flex items-center justify-evenly"
+      <header className="relative z-10">
+        <ul className="hidden fixed top-[90%] left-[50%] transform text-black -translate-x-1/2 bg-transparent md:flex justify-evenly items-center">
+          <li
+            className={`flex justify-center w-32 p-3 border-2 border-black rounded-md ${
+              location.pathname === "/" ? selectedMenu : "bg-white"
+            }`}
           >
-            <img
-              src="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/home-page-white-icon.png"
-              alt=""
-              className="h-auto w-5"
-            />
-            Accueil
-          </Link>
-          <Link to="/realisation" aria-label="realisation" className="flex items-center justify-evenly">
-            <img
-              src="src\assets\images\realisation-icon.png"
-              alt=""
-              className="h-auto w-5"
-            />
-            Réalisation
-          </Link>
-          <Link to="/contact" aria-label="contact" className="flex items-center justify-evenly">
-            <img
-              src="https://www.pngkey.com/png/full/151-1517814_telefone-do-lab-white-contact-icon-png.png"
-              alt=""
-              className="h-auto w-5"
-            />
-            Contact
-          </Link>
+            <Link
+              to="/"
+              aria-label="accueil"
+              className="flex items-center text-xl"
+            >
+              <img
+                src="src\assets\images\home.png"
+                alt="accueil icon"
+                className="h-auto w-5 mr-2 "
+              />
+              Accueil
+            </Link>
+          </li>
+          <li
+            className={`flex justify-center p-3 w-40 mx-5 border-2 border-black rounded-md ${
+              location.pathname === "/realisation" ? selectedMenu : "bg-white"
+            }`}
+          >
+            <Link
+              to="/realisation"
+              aria-label="realisation"
+              className="flex items-center text-xl"
+            >
+              <img
+                src="src/assets/images/realisation-icon.png"
+                alt="realisation icon"
+                className="h-auto w-5 mr-2"
+              />
+              Réalisation
+            </Link>
+          </li>
+          <li
+            className={`flex justify-center w-32 p-3 border-2 border-black rounded-md ${
+              location.pathname === "/contact" ? selectedMenu : "bg-white"
+            }`}
+          >
+            <Link
+              to="/contact"
+              aria-label="contact"
+              className="flex items-center text-xl"
+            >
+              <img
+                src="src\assets\images\contact.png"
+                alt="contact icon"
+                className="h-auto w-5 mr-2"
+              />
+              Contact
+            </Link>
+          </li>
         </ul>
-        <div className="drawer justify-end mr-11 mt-5 ">
+        <div className="drawer fixed left-[26%] top-[2%]  ">
           <input id="my-drawer" type="checkbox" className=" drawer-toggle " />
-          <div className="drawer-content flex items-center justify-center w-[130%] h-[130%] rounded-[15px] bg-[#d3c7b1] shadow-[21px_21px_38px_#a59b8a,-21px_-21px_38px_#fff3d8] md:hidden">
-            <label htmlFor="my-drawer" className="">
+          <div className="drawer-content flex items-center justify-center w-[130%] h-[130%] rounded-[15px] md:hidden">
+            <label htmlFor="my-drawer" className="bg-custom p-2 backdrop-opacity-10 rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
