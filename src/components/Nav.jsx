@@ -7,7 +7,7 @@ export default function Nav() {
   return (
     <>
       <header className="">
-        <ul className="hidden fixed top-[90%] left-[50%] transform -translate-x-1/2 bg-transparent md:flex justify-evenly items-center">
+        <ul className="hidden fixed top-[90%] left-[50%] transform text-black -translate-x-1/2 bg-transparent md:flex justify-evenly items-center">
           <li
             className={`flex justify-center w-32 p-3 border-2 border-black rounded-md ${
               location.pathname === "/" ? selectedMenu : "bg-white"
