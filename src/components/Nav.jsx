@@ -3,38 +3,36 @@ import { Link } from "react-router-dom";
 export default function Nav() {
   return (
     <>
-      <header className="">
-        <ul className="md:grid lg:flex justify-center md:hidden">
-          <li className="">
-            <Link to="/" aria-label="accueil" className="flex items-center">
-              <img
-                src="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/home-page-white-icon.png"
-                alt=""
-                className="h-auto w-5"
-              />
-              Accueil
-            </Link>
-          </li>
-          <li className="">
-            <Link to="/realisation" aria-label="realisation">
-              <img
-                src="src\assets\images\realisation-icon.png"
-                alt=""
-                className="h-auto w-5"
-              />
-              Réalisation
-            </Link>
-          </li>
-          <li className="">
-            <Link to="/contact" aria-label="contact">
-              <img
-                src="https://www.pngkey.com/png/full/151-1517814_telefone-do-lab-white-contact-icon-png.png"
-                alt=""
-                className="h-auto w-5"
-              />
-              Contact
-            </Link>
-          </li>
+      <header className="z-10 relative">
+        <ul className="md:grid lg:flex items-center justify-evenly ">
+          <Link
+            to="/"
+            aria-label="accueil"
+            className="flex items-center justify-evenly"
+          >
+            <img
+              src="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/home-page-white-icon.png"
+              alt=""
+              className="h-auto w-5"
+            />
+            Accueil
+          </Link>
+          <Link to="/realisation" aria-label="realisation" className="flex items-center justify-evenly">
+            <img
+              src="src\assets\images\realisation-icon.png"
+              alt=""
+              className="h-auto w-5"
+            />
+            Réalisation
+          </Link>
+          <Link to="/contact" aria-label="contact" className="flex items-center justify-evenly">
+            <img
+              src="https://www.pngkey.com/png/full/151-1517814_telefone-do-lab-white-contact-icon-png.png"
+              alt=""
+              className="h-auto w-5"
+            />
+            Contact
+          </Link>
         </ul>
         <div className="drawer justify-end mr-11 mt-5 ">
           <input id="my-drawer" type="checkbox" className=" drawer-toggle " />

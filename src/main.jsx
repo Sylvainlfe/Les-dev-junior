@@ -5,7 +5,6 @@ import App from "./App";
 import Home from "./pages/Home";
 import Realisation from "./pages/Realisation";
 import Contact from "./pages/Contact";
-import "./index.css";
 
 const router = createBrowserRouter([
   {
