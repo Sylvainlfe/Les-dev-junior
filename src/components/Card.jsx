@@ -2,7 +2,7 @@ import React from "react";
 
 function Card({ personalProfile }) {
   return (
-    <>
+    <section className="lg:flex flex-wrap items-center justify-center gap-4">
       {personalProfile.map((profile) => (
         <article
           key={profile.id}
@@ -26,7 +26,7 @@ function Card({ personalProfile }) {
           </ul>
         </article>
       ))}
-    </>
+    </section>
   );
 }
 

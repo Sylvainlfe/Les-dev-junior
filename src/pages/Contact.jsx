@@ -142,7 +142,7 @@ export default function Contact() {
   //     submit(formValues, { method: "post", action: "/ContactPage" });
   //   }
     return (
-      <main className="flex flex-col items-center justify-center lg:grid lg:grid-cols-1 lg:gap-4 lg:self-center">
+      <main className="flex flex-col items-center justify-center">
         <ContactForm 
         handleChangeInputValue={handleChangeInputValue}
         // handleSubmit={handleSubmit}
@@ -151,7 +151,7 @@ export default function Contact() {
         errors={errors}
         className="lg:col-span-1"
         />
-        <Card personalProfile={personalProfile} className="lg:col-span-1"/>
+        <Card personalProfile={personalProfile}/>
       </main>
     );
   };

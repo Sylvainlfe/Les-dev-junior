@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,7 +8,6 @@
 
 body {
   font-family: "Red Hat Display", Georgia, "Times New Roman", Times, serif;
-  /* background-color: hsl(0, 0%, 4.9%); */
   background-color: black;
   color: white;
 }
@@ -36,4 +36,64 @@ main {
 
 .bg-custom {
   background: linear-gradient(216.04deg, #ffffff0f 18.89%, #ffffff03 87.3%);
+}
+
+.contact-btn {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.contact-btn {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+.contact-btn span {
+  display: grid;
+  inset: 0;
+  place-items: center;
+  position: absolute;
+  transition: opacity 0.2s ease;
+}
+.contact-btn .marquee {
+  --spacing: 12em;
+  --start: 0em;
+  --end: 12em;
+  -webkit-animation: marquee 4s linear infinite;
+  animation: marquee 4s linear infinite;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  opacity: 1;
+  position: relative;
+  text-shadow: #fff var(--spacing) 0, #fff calc(var(--spacing) * -1) 0,
+    #fff calc(var(--spacing) * -2) 0;
+}
+.contact-btn:hover .marquee {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  opacity: 1;
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    transform: translateX(var(--start));
+  }
+  to {
+    transform: translateX(var(--end));
+  }
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(var(--start));
+  }
+  to {
+    transform: translateX(var(--end));
+  }
 }
