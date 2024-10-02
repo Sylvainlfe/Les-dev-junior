@@ -1,52 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root{
+:root {
 }
 
 body {
-    font-family: "Red Hat Display", Georgia, 'Times New Roman', Times, serif;
-    background-color: black;
-    color: white;
-    
-
+  font-family: "Red Hat Display", Georgia, "Times New Roman", Times, serif;
+  background-color: black;
+  color: white;
 }
-main{
-    background: radial-gradient(91.96% 141.6% at -22.42% 69.4%,rgba(127,0,255,.46) 0,transparent 100%),radial-gradient(84.26% 129.74% at 50% 125.36%,rgba(255,0,230,.46) 0,transparent 100%),radial-gradient(58.7% 90.38% at 113.99% 96.18%,rgba(255,0,107,.43) 0,transparent 100%),radial-gradient(56.68% 87.27% at 27.94% 112.07%,rgba(0,255,224,.43) 0,transparent 100%)
-}
-
-.bg-custom{
-    background: linear-gradient(216.04deg, #ffffff0f 18.89%, #ffffff03 87.3%);
-}
-
-.button {
-    border-radius: 99px;
-    border-width: 2px;
-    overflow: hidden; /* Pour s'assurer que le texte ne dépasse pas */
-    font-weight: 900;
-    cursor: pointer;
-    padding: 0.8rem 3rem;
-    -webkit-tap-highlight-color: transparent;
-    text-transform: uppercase;
-    display: inline-block; /* Pour que la taille du bouton soit ajustée au contenu */
-    position: relative; /* Nécessaire pour positionner correctement le texte défilant */
-}
-
-.scrol {
-    white-space: nowrap; /* Empêche le texte de passer à la ligne */
-    overflow: hidden;
-    position: absolute; /* Permet de le positionner dans le bouton */
-    left: 100%; /* Le texte commence en dehors du bouton à droite */
-    animation: marquee 10s linear infinite; /* Animation infinie */
+main {
+  background: radial-gradient(
+      91.96% 141.6% at -22.42% 69.4%,
+      rgba(127, 0, 255, 0.46) 0,
+      transparent 100%
+    ),
+    radial-gradient(
+      84.26% 129.74% at 50% 125.36%,
+      rgba(255, 0, 230, 0.46) 0,
+      transparent 100%
+    ),
+    radial-gradient(
+      58.7% 90.38% at 113.99% 96.18%,
+      rgba(255, 0, 107, 0.43) 0,
+      transparent 100%
+    ),
+    radial-gradient(
+      56.68% 87.27% at 27.94% 112.07%,
+      rgba(0, 255, 224, 0.43) 0,
+      transparent 100%
+    );
 }
 
+.bg-custom {
+  background: linear-gradient(216.04deg, #ffffff0f 18.89%, #ffffff03 87.3%);
+}
+
+.contact-btn {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.contact-btn {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+.contact-btn span {
+  display: grid;
+  inset: 0;
+  place-items: center;
+  position: absolute;
+  transition: opacity 0.2s ease;
+}
+.contact-btn .marquee {
+  --spacing: 12em;
+  --start: 0em;
+  --end: 12em;
+  -webkit-animation: marquee 4s linear infinite;
+  animation: marquee 4s linear infinite;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  opacity: 1;
+  position: relative;
+  text-shadow: #fff var(--spacing) 0, #fff calc(var(--spacing) * -1) 0,
+    #fff calc(var(--spacing) * -2) 0;
+}
+.contact-btn:hover .marquee {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+  opacity: 1;
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    transform: translateX(var(--start));
+  }
+  to {
+    transform: translateX(var(--end));
+  }
+}
 @keyframes marquee {
-    0% {
-        transform: translateX(0); /* Le texte commence à l'extérieur à droite */
-    }
-    100% {
-        transform: translateX(-100%); /* Le texte sort par la gauche */
-    }
+  0% {
+    transform: translateX(var(--start));
+  }
+  to {
+    transform: translateX(var(--end));
+  }
 }
