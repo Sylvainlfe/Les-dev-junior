@@ -32,7 +32,7 @@ export default function Nav() {
             }`}
           >
             <Link
-              to="/realisation"
+              to="/#realisation"
               aria-label="realisation"
               className="flex items-center text-xl"
             >
@@ -66,7 +66,10 @@ export default function Nav() {
         <div className="drawer fixed left-[26%] top-[2%]  ">
           <input id="my-drawer" type="checkbox" className=" drawer-toggle " />
           <div className="drawer-content flex items-center justify-center w-[130%] h-[130%] rounded-[15px] md:hidden">
-            <label htmlFor="my-drawer" className="bg-custom p-2 backdrop-opacity-10 rounded-full">
+            <label
+              htmlFor="my-drawer"
+              className="bg-custom p-2 backdrop-opacity-10 rounded-full"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
