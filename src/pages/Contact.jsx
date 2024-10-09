@@ -33,10 +33,10 @@ const personalProfile = [
     id: 3,
     image: imgSylvain,
     title: titleCard,
-    firstname: "Prénom 3",
-    lastname: "Nom 3",
-    description: "Description du projet 3",
-    stack: ["Technologie5", "Technologie6"],
+    firstname: "Sylvain",
+    lastname: "Lafaye",
+    description: "Reconversion, ancien chargé d'affaire dans la climatisation.",
+    stack: ["Html", "CSS"],
     github: "lien_vers_github_3",
   },
   {
@@ -48,16 +48,6 @@ const personalProfile = [
     description: "Description du projet 4",
     stack: ["Technologie7", "Technologie8"],
     github: "lien_vers_github_4",
-  },
-  {
-    id: 5,
-    image: "url_de_l_image_5",
-    title: titleCard,
-    firstname: "Prénom 5",
-    lastname: "Nom 5",
-    description: "Description du projet 5",
-    stack: ["Technologie9", "Technologie10"],
-    github: "lien_vers_github_5",
   },
 ];
 
@@ -142,16 +132,15 @@ export default function Contact() {
   //     submit(formValues, { method: "post", action: "/ContactPage" });
   //   }
     return (
-      <main className="flex flex-col items-center justify-center">
+      <main>
         <ContactForm 
         handleChangeInputValue={handleChangeInputValue}
         // handleSubmit={handleSubmit}
         fields={fields}
         formValues={formValues}
         errors={errors}
-        className="lg:col-span-1"
         />
-        <Card personalProfile={personalProfile}/>
+        <Card  personalProfile={personalProfile}/>
       </main>
     );
   };
