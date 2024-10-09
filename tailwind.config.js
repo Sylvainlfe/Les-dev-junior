@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        'contactShadow':'0 0 0 1px #ffffff20',
+      },
+      backgroundImage: {
+        'cardTransparent': `radial-gradient(157.14% 157.14% at 67.21% -25.11%, hsla(0, 0%, 100%, 0.06) 0%, transparent 100%)`,
+      },
+    },
   },
   plugins: [
     require('daisyui'),
