@@ -2,6 +2,7 @@ import Card from "../components/Card";
 import imgFabien from "../assets/images/fabien.webp";
 import imgPaul from "../assets/images/paul.webp";
 import imgSylvain from "../assets/images/sylvain.jfif";
+import imgAlex from "../assets/images/alex.webp"
 import { useEffect, useRef, useState } from "react";
 import { useSubmit } from "react-router-dom";
 import ContactForm from "../components/contactForm";
@@ -41,11 +42,11 @@ const personalProfile = [
   },
   {
     id: 4,
-    image: "url_de_l_image_4",
+    image: imgAlex,
     title: titleCard,
-    firstname: "Prénom 4",
-    lastname: "Nom 4",
-    description: "Description du projet 4",
+    firstname: "Alex",
+    lastname: "name",
+    description: "sdfsdfsdf resfsdfs",
     stack: ["Technologie7", "Technologie8"],
     github: "lien_vers_github_4",
   },
