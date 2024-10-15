@@ -17,9 +17,19 @@ const personalProfile = [
     firstname: "Fabien",
     lastname: "Rollet",
     description: "Description du projet 1",
-    stack: ["React","HTML5","SCSS","Tailwind","JavaScript","NodeJS", "ExpressJS","MySql"],
+    stack: [
+      "React",
+      "HTML5",
+      "SCSS",
+      "Tailwind",
+      "JavaScript",
+      "NodeJS",
+      "ExpressJS",
+      "MySql",
+    ],
     github: "https://github.com/FabienRollet",
-    githubName: "Retrouvez moi sur Github",
+    githubName: "Retrouvez moi sur Github ici !",
+    cv: "../Rollet Fabien CV.pdf",
   },
   {
     id: 2,
@@ -31,6 +41,7 @@ const personalProfile = [
     stack: ["Technologie3", "Technologie4"],
     github: "lien_vers_github_2",
     githubName: "Retrouvez moi sur Github",
+    cv: "",
   },
   {
     id: 3,
@@ -42,6 +53,7 @@ const personalProfile = [
     stack: ["Html", "CSS"],
     github: "lien_vers_github_3",
     githubName: "Retrouvez moi sur Github",
+    cv: "",
   },
   {
     id: 4,
@@ -53,6 +65,7 @@ const personalProfile = [
     stack: ["Technologie7", "Technologie8"],
     github: "lien_vers_github_4",
     githubName: "Retrouvez moi sur Github",
+    cv: "",
   },
 ];
 
@@ -129,7 +142,7 @@ export default function Contact() {
     }
     const emailInput = document.getElementById("email");
     const commentInput = document.getElementById("comment");
-    const nameInput = document.getElementById("name")
+    const nameInput = document.getElementById("name");
     const email = emailInput.value;
     const message = commentInput.value;
     const name = nameInput.value;
