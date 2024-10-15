@@ -18,7 +18,8 @@ const personalProfile = [
     lastname: "Rollet",
     description: "Description du projet 1",
     stack: ["React","HTML5","SCSS","Tailwind","JavaScript","NodeJS", "ExpressJS","MySql"],
-    github: "lien_vers_github_1",
+    github: "https://github.com/FabienRollet",
+    githubName: "Retrouvez moi sur Github",
   },
   {
     id: 2,
@@ -29,6 +30,7 @@ const personalProfile = [
     description: "Description du projet 2",
     stack: ["Technologie3", "Technologie4"],
     github: "lien_vers_github_2",
+    githubName: "Retrouvez moi sur Github",
   },
   {
     id: 3,
@@ -39,6 +41,7 @@ const personalProfile = [
     description: "Reconversion, ancien chargé d'affaire dans la climatisation.",
     stack: ["Html", "CSS"],
     github: "lien_vers_github_3",
+    githubName: "Retrouvez moi sur Github",
   },
   {
     id: 4,
@@ -49,6 +52,7 @@ const personalProfile = [
     description: "sdfsdfsdf resfsdfs",
     stack: ["Technologie7", "Technologie8"],
     github: "lien_vers_github_4",
+    githubName: "Retrouvez moi sur Github",
   },
 ];
 

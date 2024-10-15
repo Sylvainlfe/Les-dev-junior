@@ -28,7 +28,7 @@ function Card({ personalProfile }) {
                 </li>
               ))}
             </ul>
-            <a href="">{profile.github}</a>
+            <a target="_blank" href={profile.github}>{profile.githubName}</a>
           </ul>
         </article>
       ))}
