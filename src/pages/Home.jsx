@@ -19,7 +19,7 @@ function Home() {
 
   return (
     <>
-      <main className="h-screen">
+      <main className="h-screen overflow-x-hidden">
         <section className="relative h-screen w-[80%] top-[25%] left-[50%] lg:top-[40%] transform -translate-x-1/2 text-[1rem] md:text-[2rem] text-white ">
           <h1 className="text-center text-xl lg:text-left ">
             Un collectif de jeunes développeurs qui a soif d&apos;experience
