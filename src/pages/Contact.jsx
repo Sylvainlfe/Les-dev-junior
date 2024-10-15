@@ -52,7 +52,7 @@ const personalProfile = [
     stack: ["Html", "CSS"],
     github: "lien_vers_github_3",
     githubName: "Retrouvez moi sur Github",
-    cv: "",
+    cv: "../sylvainLafCv.pdf",
   },
   {
     id: 4,
