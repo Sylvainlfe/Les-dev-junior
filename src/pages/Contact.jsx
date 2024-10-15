@@ -3,8 +3,7 @@ import imgFabien from "../assets/images/fabien.webp";
 import imgPaul from "../assets/images/paul.webp";
 import imgSylvain from "../assets/images/sylvain.jfif";
 import imgAlex from "../assets/images/alex.webp";
-import { useEffect, useRef, useState } from "react";
-import { useSubmit } from "react-router-dom";
+import { useRef, useState } from "react";
 import ContactForm from "../components/contactForm";
 
 const titleCard = "Développeur web fullstack";
@@ -17,7 +16,16 @@ const personalProfile = [
     firstname: "Fabien",
     lastname: "Rollet",
     description: "Description du projet 1",
-    stack: ["React","HTML5","SCSS","Tailwind","JavaScript","NodeJS", "ExpressJS","MySql"],
+    stack: [
+      "React",
+      "HTML5",
+      "SCSS",
+      "Tailwind",
+      "JavaScript",
+      "NodeJS",
+      "ExpressJS",
+      "MySql",
+    ],
     github: "lien_vers_github_1",
   },
   {
@@ -63,8 +71,6 @@ export default function Contact() {
   const emailRef = useRef();
   const commentRef = useRef();
 
-  const submit = useSubmit();
-
   const textLabel = [
     {
       required: true,
@@ -92,7 +98,6 @@ export default function Contact() {
     },
   ];
 
-  // const actionData = useActionData();
   const [formValues, setFormValues] = useState(emptyFields);
   const [fields, setFields] = useState(textLabel);
   const [errors, setErrors] = useState({});
@@ -120,6 +125,10 @@ export default function Contact() {
     "https://discord.com/api/webhooks/1295714093562466344/Hc85RRuMQYnMEVTp-B60d9RXjR_4vvtLL6VHBirUq-E60rkzphDPT5s0pgZCZz3maGbm";
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (!validateForm()) {
+      alert("Veuillez remplir tous les champs obligatoires.");
+      return;
+    }
     const emailInput = document.getElementById("email");
     const commentInput = document.getElementById("comment");
     const email = emailInput.value;
