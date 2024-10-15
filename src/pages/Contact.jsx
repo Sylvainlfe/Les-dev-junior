@@ -2,7 +2,7 @@ import Card from "../components/Card";
 import imgFabien from "../assets/images/fabien.webp";
 import imgPaul from "../assets/images/paul.webp";
 import imgSylvain from "../assets/images/sylvain.jfif";
-import imgAlex from "../assets/images/alex.webp"
+import imgAlex from "../assets/images/alex.webp";
 import { useEffect, useRef, useState } from "react";
 import { useSubmit } from "react-router-dom";
 import ContactForm from "../components/contactForm";
@@ -14,10 +14,10 @@ const personalProfile = [
     id: 1,
     image: imgFabien,
     title: titleCard,
-    firstname: "Prénom 1",
-    lastname: "Nom 1",
+    firstname: "Fabien",
+    lastname: "Rollet",
     description: "Description du projet 1",
-    stack: ["Technologie1", "Technologie2"],
+    stack: ["React","HTML5","SCSS","Tailwind","JavaScript","NodeJS", "ExpressJS","MySql"],
     github: "lien_vers_github_1",
   },
   {
@@ -116,33 +116,50 @@ export default function Contact() {
     });
   };
 
-  // useEffect(() => {
-  //   if (actionData) {
-  //     if (actionData.ok) {
-  //       alert("Email envoyé avec succès !");
-  //       setFormValues(emptyFields);
-  //     } else {
-  //       alert("Erreur lors de l'envoi de l'email.");
-  //     }
-  //   }
-  // }, [actionData]);
+  const webhookURL =
+    "https://discord.com/api/webhooks/1295714093562466344/Hc85RRuMQYnMEVTp-B60d9RXjR_4vvtLL6VHBirUq-E60rkzphDPT5s0pgZCZz3maGbm";
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const emailInput = document.getElementById("email");
+    const commentInput = document.getElementById("comment");
+    const email = emailInput.value;
+    const message = commentInput.value;
+    const payload = {
+      content: `Nouveau message du portfolio des devs juniors:\nAdresse email: ${email}\nMessage: ${message}`,
+    };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   if (validateForm()) {
-  //     submit(formValues, { method: "post", action: "/ContactPage" });
-  //   }
-    return (
-      <main>
-        <ContactForm 
+    fetch(webhookURL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    })
+      .then((response) => {
+        if (response.ok) {
+          alert("Message envoyé avec succès !");
+          emailInput.value = "";
+          commentInput.value = "";
+        } else {
+          alert("Une erreur est survenue.");
+        }
+      })
+      .catch((error) => {
+        console.error("Erreur:", error);
+        alert("Une erreur est survenue.");
+      });
+  };
+
+  return (
+    <main>
+      <ContactForm
         handleChangeInputValue={handleChangeInputValue}
-        // handleSubmit={handleSubmit}
+        handleSubmit={handleSubmit}
         fields={fields}
         formValues={formValues}
         errors={errors}
-        />
-        <Card  personalProfile={personalProfile}/>
-      </main>
-    );
-  };
-
+      />
+      <Card personalProfile={personalProfile} />
+    </main>
+  );
+}

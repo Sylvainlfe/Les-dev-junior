@@ -7,6 +7,7 @@ function ContactForm({
   errors,
   handleSubmit,
 }) {
+  
   return (
     <section className="flex justify-center items-center h-lvh">
       <form
