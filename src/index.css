@@ -123,3 +123,23 @@ main {
     transform: translateX(var(--end));
   }
 }
+
+.Btn:hover {
+  width: 14rem;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  padding-left: 20px;
+}
+
+.Btn:hover .text {
+  width: 80%;
+  opacity: 1;
+  padding-right: 20px;
+}
+
+.Btn:active {
+  transform: translate(2px, 2px);
+}
+

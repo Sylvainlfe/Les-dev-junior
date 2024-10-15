@@ -7,7 +7,7 @@ export default function Nav() {
   return (
     <>
       <header className="relative z-10">
-        <ul className="hidden fixed top-[90%] left-[50%] transform text-black -translate-x-1/2 bg-transparent md:flex justify-evenly items-center">
+        <ul className="hidden fixed top-[90%] left-[58%] transform text-black -translate-x-1/2 bg-transparent md:flex md:gap-2 md:w-[688px]">
           <li
             className={`flex justify-center w-32 p-3 border-2 border-black rounded-md ${
               location.pathname === "/" ? selectedMenu : "bg-white"
@@ -27,7 +27,7 @@ export default function Nav() {
             </Link>
           </li>
           <li
-            className={`flex justify-center p-3 w-40 mx-5 border-2 border-black rounded-md ${
+            className={`flex justify-center p-3 w-40 border-2 border-black rounded-md ${
               location.pathname === "/realisation" ? selectedMenu : "bg-white"
             }`}
           >
@@ -62,6 +62,14 @@ export default function Nav() {
               Contact
             </Link>
           </li>
+          <button class="Btn flex items-center rounded-full w-14 h-14 cursor-pointer relative overflow-hidden transition-all duration-300 shadow-[2px_2px_10px_rgba(0,0,0,0.2)] bg-black">
+            <div class="sign w-full text-2xl text-white transition-all duration-300 ">
+            ©
+            </div>
+            <div class="text absolute right-0 w-0 opacity-0 text-white text-lg font-medium transition-all duration-300">
+              LesDevJuniors
+            </div>
+          </button>
         </ul>
         <div className="drawer fixed left-[26%] top-[2%]  ">
           <input id="my-drawer" type="checkbox" className=" drawer-toggle " />
