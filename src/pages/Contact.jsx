@@ -3,8 +3,7 @@ import imgFabien from "../assets/images/fabien.webp";
 import imgPaul from "../assets/images/paul.webp";
 import imgSylvain from "../assets/images/sylvain.jfif";
 import imgAlex from "../assets/images/alex.webp";
-import { useEffect, useRef, useState } from "react";
-import { useSubmit } from "react-router-dom";
+import { useRef, useState } from "react";
 import ContactForm from "../components/contactForm";
 
 const titleCard = "Développeur web fullstack";
@@ -79,8 +78,6 @@ export default function Contact() {
   const nameRef = useRef();
   const emailRef = useRef();
   const commentRef = useRef();
-
-  const submit = useSubmit();
 
   const textLabel = [
     {
