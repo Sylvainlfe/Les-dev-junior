@@ -131,10 +131,12 @@ export default function Contact() {
     }
     const emailInput = document.getElementById("email");
     const commentInput = document.getElementById("comment");
+    const nameInput = document.getElementById("name")
     const email = emailInput.value;
     const message = commentInput.value;
+    const name = nameInput.value;
     const payload = {
-      content: `Nouveau message du portfolio des devs juniors:\nAdresse email: ${email}\nMessage: ${message}`,
+      content: `Nouveau message du portfolio des devs juniors:\nNom et prénom: ${name}\nAdresse email: ${email}\nMessage: ${message}`,
     };
 
     fetch(webhookURL, {
@@ -147,6 +149,7 @@ export default function Contact() {
       .then((response) => {
         if (response.ok) {
           alert("Message envoyé avec succès !");
+          nameInput.value = "";
           emailInput.value = "";
           commentInput.value = "";
         } else {
