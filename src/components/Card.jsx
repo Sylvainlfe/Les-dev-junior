@@ -28,12 +28,11 @@ function Card({ personalProfile }) {
                 </li>
               ))}
             </ul>
-            <a
-              target="_blank"
-              href={profile.github}
-              className="underline"
-            >
-              Retrouvez moi sur github
+            <a className="underline w-64" target="_blank" href={profile.github}>
+              {profile.githubName}
+            </a>
+            <a href={profile.cv} target="_blank" className="underline">
+              Téléchargez mon CV !
             </a>
           </ul>
         </article>

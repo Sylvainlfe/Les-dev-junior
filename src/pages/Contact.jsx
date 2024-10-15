@@ -26,7 +26,9 @@ const personalProfile = [
       "ExpressJS",
       "MySql",
     ],
-    github: "lien_vers_github_1",
+    github: "https://github.com/FabienRollet",
+    githubName: "Retrouvez moi sur Github ici !",
+    cv: "../Rollet Fabien CV.pdf",
   },
   {
     id: 2,
@@ -37,6 +39,8 @@ const personalProfile = [
     description: "Description du projet 2",
     stack: ["Technologie3", "Technologie4"],
     github: "lien_vers_github_2",
+    githubName: "Retrouvez moi sur Github",
+    cv: "",
   },
   {
     id: 3,
@@ -46,7 +50,9 @@ const personalProfile = [
     lastname: "Lafaye",
     description: "Reconversion, ancien chargé d'affaire dans la climatisation.",
     stack: ["Html", "CSS"],
-    github: "https://github.com/Sylvainlfe",
+    github: "lien_vers_github_3",
+    githubName: "Retrouvez moi sur Github",
+    cv: "",
   },
   {
     id: 4,
@@ -57,6 +63,8 @@ const personalProfile = [
     description: "sdfsdfsdf resfsdfs",
     stack: ["Technologie7", "Technologie8"],
     github: "lien_vers_github_4",
+    githubName: "Retrouvez moi sur Github",
+    cv: "",
   },
 ];
 
@@ -131,7 +139,7 @@ export default function Contact() {
     }
     const emailInput = document.getElementById("email");
     const commentInput = document.getElementById("comment");
-    const nameInput = document.getElementById("name")
+    const nameInput = document.getElementById("name");
     const email = emailInput.value;
     const message = commentInput.value;
     const name = nameInput.value;
