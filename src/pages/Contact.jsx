@@ -46,7 +46,7 @@ const personalProfile = [
     lastname: "Lafaye",
     description: "Reconversion, ancien chargé d'affaire dans la climatisation.",
     stack: ["Html", "CSS"],
-    github: "lien_vers_github_3",
+    github: "https://github.com/Sylvainlfe",
   },
   {
     id: 4,

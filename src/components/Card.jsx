@@ -15,7 +15,7 @@ function Card({ personalProfile }) {
               className="w-full h-80 md:w-40 md:h-full object-cover"
             />
           </figure>
-          <ul className="card-body flex-1">
+          <ul className="card-body gap-2 flex-1">
             <h2 className="card-title">{profile.title}</h2>
             <p className="">
               {profile.firstname} {profile.lastname}
@@ -28,7 +28,13 @@ function Card({ personalProfile }) {
                 </li>
               ))}
             </ul>
-            <a href="">{profile.github}</a>
+            <a
+              target="_blank"
+              href={profile.github}
+              className="underline"
+            >
+              Retrouvez moi sur github
+            </a>
           </ul>
         </article>
       ))}

@@ -30,7 +30,7 @@ function ContactForm({
                 onChange={handleChangeInputValue}
                 placeholder={field.text}
                 aria-label={field.text}
-                className="bg-white/20 px-4 py-3 mt-2 outline-none w-full text-black rounded-2xl border-2 transition-colors duration-100 border-solid focus:border-white/60 border-white/20"
+                className="bg-white/20 px-4 py-3 mt-2 outline-none w-full text-white rounded-2xl border-2 transition-colors duration-100 border-solid focus:border-white/60 border-white/20"
               />
             ) : (
               <input
