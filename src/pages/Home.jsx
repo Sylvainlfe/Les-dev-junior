@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Realisation from "./Realisation";
+import InfoSection from "../components/InfoSection";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -44,6 +45,7 @@ function Home() {
             alt=""
           />
         </section>
+        <InfoSection />
         <Realisation />
       </main>
     </>
