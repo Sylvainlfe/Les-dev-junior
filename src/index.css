@@ -143,3 +143,7 @@ main {
   transform: translate(2px, 2px);
 }
 
+.text-shadow {
+  text-shadow: 0 0 15px hsl(0, 0%, 100%);
+}
+

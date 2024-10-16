@@ -2,15 +2,15 @@ import { Link, useLocation } from "react-router-dom";
 
 export default function Nav() {
   const location = useLocation();
-  const selectedMenu = "bg-gray-900 font-bold text-white rounded-md";
+  const selectedMenu = "text-white text-shadow";
 
   return (
     <>
       <header className="relative z-10">
-        <ul className="hidden fixed top-[90%] left-[58%] transform text-black -translate-x-1/2 bg-transparent md:flex md:gap-2 md:w-[688px]">
+        <ul className="hidden fixed top-[90%] left-[58%] transform text-[#ffffff80] -translate-x-1/2 bg-transparent md:flex md:gap-2 md:w-[688px]">
           <li
-            className={`flex justify-center w-32 p-3 border-2 border-black rounded-md ${
-              location.pathname === "/" ? selectedMenu : "bg-white"
+            className={`flex justify-center w-32 p-3 bg-cardTransparent shadow-navShadow backdrop-blur-sm rounded-full ${
+              location.pathname === "/" ? selectedMenu : "text-[#ffffff80] hover:text-white"
             }`}
           >
             <Link
@@ -27,8 +27,9 @@ export default function Nav() {
             </Link>
           </li>
           <li
-            className={`flex justify-center p-3 w-40 border-2 border-black rounded-md ${
-              location.pathname === "/realisation" ? selectedMenu : "bg-white"
+            aria-current="page"
+            className={`flex justify-center p-3 w-40 bg-cardTransparent shadow-navShadow backdrop-blur-sm rounded-full ${
+              location.pathname === "/#realisation" ? selectedMenu : "text-[#ffffff80] hover:text-white"
             }`}
           >
             <Link
@@ -45,8 +46,8 @@ export default function Nav() {
             </Link>
           </li>
           <li
-            className={`flex justify-center w-32 p-3 border-2 border-black rounded-md ${
-              location.pathname === "/contact" ? selectedMenu : "bg-white"
+            className={`flex justify-center w-32 p-3 bg-cardTransparent shadow-navShadow backdrop-blur-sm rounded-full ${
+              location.pathname === "/contact" ? selectedMenu : "text-[#ffffff80] hover:text-white"
             }`}
           >
             <Link
@@ -62,7 +63,7 @@ export default function Nav() {
               Contact
             </Link>
           </li>
-          <button class="Btn flex items-center rounded-full w-14 h-14 cursor-pointer relative overflow-hidden transition-all duration-300 shadow-[2px_2px_10px_rgba(0,0,0,0.2)] bg-black">
+          <button class="Btn flex items-center rounded-full w-14 h-14 cursor-pointer relative overflow-hidden transition-all duration-300 shadow-navShadow bg-black">
             <div class="sign w-full text-2xl text-white transition-all duration-300 ">
             ©
             </div>
