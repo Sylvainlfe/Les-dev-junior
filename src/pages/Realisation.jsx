@@ -1,3 +1,5 @@
+import ProjectCard from "../components/ProjectCard";
+
 export default function Realisation() {
   return (
     <>
@@ -5,6 +7,7 @@ export default function Realisation() {
       <section id="realisation" className="bg-black relative">
         Nos realisations :
       </section>
+      <ProjectCard />
     </>
   );
 }
