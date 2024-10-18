@@ -5,19 +5,20 @@ export default function Nav() {
   const location = useLocation();
   const selectedMenu = "text-white text-shadow";
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleCloseMenu = () => {
-    setIsMenuOpen(false)
-  }
+    setIsMenuOpen(false);
+  };
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-      <header className="relative z-10">
-        <ul className="hidden fixed top-[90%] left-[58%] transform text-[#ffffff80] -translate-x-1/2 bg-transparent md:flex md:gap-2 md:w-[688px]">
+    <header className="relative z-10">
+      <ul className="hidden fixed top-[90%] left-[58%] transform text-[#ffffff80] -translate-x-1/2 bg-transparent md:flex md:gap-2 md:w-[688px]">
+        <li>
           <Link
             to="/"
             aria-label="accueil"
@@ -34,7 +35,8 @@ export default function Nav() {
             />
             <p className="text-xl">Accueil</p>
           </Link>
-
+        </li>
+        <li>
           <Link
             to="/#realisation"
             aria-label="realisation"
@@ -51,7 +53,8 @@ export default function Nav() {
             />
             <p className="text-xl">Réalisation</p>
           </Link>
-
+        </li>
+        <li>
           <Link
             to="/contact"
             aria-label="contact"
@@ -68,7 +71,8 @@ export default function Nav() {
             />
             <p className="text-xl">Contact</p>
           </Link>
-
+        </li>
+        <li>
           <button class="Btn flex items-center rounded-full w-14 h-14 cursor-pointer relative overflow-hidden transition-all duration-300 shadow-navShadow bg-black">
             <p class="sign w-full text-2xl text-white transition-all duration-300 ">
               ©
@@ -77,42 +81,54 @@ export default function Nav() {
               LesDevJuniors
             </p>
           </button>
-        </ul>
-        <div className="drawer fixed left-[26%] top-[2%]  ">
-          <input id="my-drawer" type="checkbox" className=" drawer-toggle " checked={isMenuOpen} onChange={toggleMenu}/>
-          <div className="drawer-content flex items-center justify-center w-[130%] h-[130%] rounded-[15px] md:hidden">
-            <label
-              htmlFor="my-drawer"
-              className="bg-custom p-2 backdrop-opacity-10 rounded-full z-10"
+        </li>
+      </ul>
+      <nav className="drawer fixed left-[26%] top-[2%]  ">
+        <input
+          id="my-drawer"
+          type="checkbox"
+          className=" drawer-toggle "
+          checked={isMenuOpen}
+          onChange={toggleMenu}
+        />
+        <div className="drawer-content flex items-center justify-center w-[130%] h-[130%] rounded-[15px] md:hidden">
+          <label
+            htmlFor="my-drawer"
+            className="bg-custom p-2 backdrop-opacity-10 rounded-full z-10"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              className="inline-block h-12 w-12 stroke-current"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="inline-block h-12 w-12 stroke-current"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
-            </label>
-          </div>
-          <div className={`drawer-side ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-            <label
-              htmlFor="my-drawer"
-              aria-label="close sidebar"
-              className="drawer-overlay"
-              onClick={handleCloseMenu}
-            ></label>
-            <ul className="bg-cardTransparent bg-black bg-opacity-60 backdrop-blur-md text-white h-full w-full flex flex-col justify-center items-center gap-4">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </label>
+        </div>
+        <div
+          className={`drawer-side ${
+            isMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <label
+            htmlFor="my-drawer"
+            aria-label="close sidebar"
+            className="drawer-overlay"
+            onClick={handleCloseMenu}
+          ></label>
+          <ul className="bg-cardTransparent bg-black bg-opacity-60 backdrop-blur-md text-white h-full w-full flex flex-col justify-center items-center gap-4">
+            <li>
               <Link
                 to="/"
                 aria-label="accueil"
                 onClick={handleCloseMenu}
-                className="w-40 p-3 bg-cardTransparent rounded-full shadow-navShadow flex justify-center items-center"
+                className="w-48 p-3 bg-cardTransparent rounded-full shadow-navShadow flex justify-center items-center"
               >
                 <img
                   src="https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/home-page-white-icon.png"
@@ -121,12 +137,13 @@ export default function Nav() {
                 />
                 <p className="text-xl">Accueil</p>
               </Link>
-
+            </li>
+            <li>
               <Link
                 to="/#realisation"
                 aria-label="realisation"
                 onClick={handleCloseMenu}
-                className="w-40 p-3 bg-cardTransparent rounded-full shadow-navShadow flex justify-center items-center"
+                className="w-48 p-3 bg-cardTransparent rounded-full shadow-navShadow flex justify-center items-center"
               >
                 <img
                   src="src\assets\images\realisation-icon.png"
@@ -135,11 +152,13 @@ export default function Nav() {
                 />
                 <p className="text-xl">Réalisation</p>
               </Link>
+            </li>
+            <li>
               <Link
                 to="/contact"
                 aria-label="contact"
                 onClick={handleCloseMenu}
-                className="w-40 p-3 bg-cardTransparent rounded-full shadow-navShadow flex justify-center items-center"
+                className="w-48 p-3 bg-cardTransparent rounded-full shadow-navShadow flex justify-center items-center"
               >
                 <img
                   src="https://www.pngkey.com/png/full/151-1517814_telefone-do-lab-white-contact-icon-png.png"
@@ -148,9 +167,15 @@ export default function Nav() {
                 />
                 <p className="text-xl">Contact</p>
               </Link>
-            </ul>
-          </div>
+            </li>
+            <li>
+              <button class="w-48 p-3 flex items-center justify-center rounded-full cursor-pointer shadow-navShadow bg-black text-xl">
+                © LesDevJuniors
+              </button>
+            </li>
+          </ul>
         </div>
-      </header>
+      </nav>
+    </header>
   );
 }
