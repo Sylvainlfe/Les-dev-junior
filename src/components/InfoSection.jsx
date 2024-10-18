@@ -6,7 +6,7 @@ export default function InfoSection() {
   const [isExpanded3, setIsExpanded3] = useState(false);
 
   return (
-    <section className="flex flex-col lg:flex-row w-2/3 m-auto mb-10 gap-7 [&>*]:lg:w-1/3 [&>*]:p-10 [&>*]:bg-cardTransparent [&>*]:shadow-contactShadow [&>*]:rounded-xl [&>*>img]:h-32 [&>*>img]:m-auto [&>*>h2]:text-xl [&>*>h2]:font-bold  [&>*>h2]:text-center [&>*>h2]:py-3 [&>*>p]:text-justify [&>*>button]:lg:hidden [&>*>button]:underline [&>*>button]:mt-4">
+    <section className="flex flex-col lg:flex-row w-80 lg:w-2/3 m-auto mb-10 gap-7 [&>article]:lg:w-1/3 [&>article]:p-5 [&>article]:bg-cardTransparent [&>article]:shadow-contactShadow [&>article]:rounded-xl [&>article>img]:h-32 [&>article>img]:m-auto [&>article>h2]:text-xl [&>article>h2]:font-bold [&>article>h2]:text-center [&>article>h2]:py-3 [&>article>p]:text-justify [&>article>p]:indent-8 [&>article>button]:lg:hidden [&>article>button]:underline [&>article>button]:mt-4">
       <article>
         <img
           src="src/assets/images/bachelor-cap.png"
@@ -17,20 +17,13 @@ export default function InfoSection() {
 
         <p
           className={`${
-            isExpanded1 ? "max-h-full" : "max-h-24 overflow-hidden"
+            isExpanded1 ? "max-h-full" : "line-clamp-4 overflow-hidden"
           } lg:max-h-full lg:overflow-visible`}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-          commodi optio excepturi unde? Aspernatur eveniet est dolore facere!
-          Fugiat architecto rem reiciendis. Natus nisi excepturi in nihil ut
-          libero aut. Illum repellendus sunt, doloribus placeat suscipit beatae!
-          Quis iusto libero minus nemo inventore. Asperiores, repellendus ipsam
-          commodi repudiandae accusantium eligendi sequi! Voluptate tempora
-          sapiente quis, voluptas aperiam deserunt veniam blanditiis?
+          Nous croyons fermement en l'importance de l'innovation. Notre objectif est de toujours repousser les limites et d'offrir des solutions avant-gardistes qui répondent aux besoins changeants de notre marché. En intégrant les dernières technologies et en encourageant la créativité, nous nous assurons de rester à la pointe de notre secteur.
+          
         </p>
-        <button
-          onClick={() => setIsExpanded1(!isExpanded1)}
-        >
+        <button onClick={() => setIsExpanded1(!isExpanded1)}>
           {isExpanded1 ? "Voir moins ▲" : "Voir plus ▼"}
         </button>
       </article>
@@ -39,7 +32,7 @@ export default function InfoSection() {
         <h2>Notre mission</h2>
         <p
           className={`${
-            isExpanded2 ? "max-h-full" : "max-h-16 overflow-hidden"
+            isExpanded2 ? "max-h-full" : "line-clamp-4 overflow-hidden"
           } lg:max-h-full lg:overflow-visible`}
         >
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
@@ -47,9 +40,7 @@ export default function InfoSection() {
           tempora officiis culpa, magni nostrum harum eveniet maxime explicabo
           voluptas nemo nobis.
         </p>
-        <button
-          onClick={() => setIsExpanded2(!isExpanded2)}
-        >
+        <button onClick={() => setIsExpanded2(!isExpanded2)}>
           {isExpanded2 ? "Voir moins ▲" : "Voir plus ▼"}
         </button>
       </article>
@@ -59,7 +50,7 @@ export default function InfoSection() {
 
         <p
           className={`${
-            isExpanded3 ? "max-h-full" : "max-h-16 overflow-hidden"
+            isExpanded3 ? "max-h-full" : "line-clamp-4 overflow-hidden"
           } lg:max-h-full lg:overflow-visible`}
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum accusamus
@@ -67,9 +58,7 @@ export default function InfoSection() {
           quidem repellendus est, illum enim quam, delectus labore nobis nisi
           quia doloremque consequuntur!
         </p>
-        <button
-          onClick={() => setIsExpanded3(!isExpanded3)}
-        >
+        <button onClick={() => setIsExpanded3(!isExpanded3)}>
           {isExpanded3 ? "Voir moins ▲" : "Voir plus ▼"}
         </button>
       </article>
