@@ -5,6 +5,7 @@ import App from "./App";
 import Home from "./pages/Home";
 import Realisation from "./pages/Realisation";
 import Contact from "./pages/Contact";
+import Copyright from "./pages/Copyright";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/copyright",
+        element: <Copyright />,
       },
     ],
   },

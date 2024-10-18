@@ -73,14 +73,14 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <button className="Btn flex items-center rounded-full w-14 h-14 cursor-pointer relative overflow-hidden transition-all duration-300 shadow-navShadow bg-black">
+          <Link to="/copyright" className="Btn flex items-center rounded-full w-14 h-14 cursor-pointer relative overflow-hidden pl-[19px] transition-all duration-300 shadow-navShadow bg-black">
             <p className="sign w-full text-2xl text-white transition-all duration-300 ">
               ©
             </p>
-            <p className="text absolute right-0 w-0 opacity-0 text-white text-lg font-medium transition-all duration-300">
+            <p className="text absolute right-0 w-0 opacity-0 text-white text-lg font-medium transition-all pl-[19px] duration-300">
               LesDevJuniors
             </p>
-          </button>
+          </Link>
         </li>
       </ul>
       <nav className="drawer fixed left-[26%] top-[2%]  ">
