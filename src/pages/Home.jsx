@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Realisation from "./Realisation";
 import HeroSection from "../components/HeroSection";
+import InfoSection from "../components/InfoSection";
+import { Link } from "react-router-dom";
 
 function Home() {
   const location = useLocation();
@@ -20,6 +22,7 @@ function Home() {
   return (
     <main className="">
       <HeroSection />
+      <InfoSection />
       <Realisation />
     </main>
   );
