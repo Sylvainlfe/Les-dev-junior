@@ -17,7 +17,7 @@ export default function Nav() {
 
   return (
     <header className="relative z-10">
-      <ul className="hidden fixed top-[90%] left-[58%] transform text-[#ffffff80] -translate-x-1/2 bg-transparent md:flex md:gap-2 md:w-[688px]">
+      <ul className="hidden fixed top-[90%] left-[50%] transform text-[#ffffff80] -translate-x-1/2 bg-transparent lg:flex lg:gap-2 lg:w-[496px]">
         <li>
           <Link
             to="/"
@@ -91,7 +91,7 @@ export default function Nav() {
           checked={isMenuOpen}
           onChange={toggleMenu}
         />
-        <div className="drawer-content flex items-center justify-center w-[130%] h-[130%] rounded-[15px] md:hidden">
+        <div className="drawer-content flex items-center justify-center w-[130%] h-[130%] rounded-[15px] lg:hidden">
           <label
             htmlFor="my-drawer"
             className="bg-custom p-2 backdrop-opacity-10 rounded-full z-10"

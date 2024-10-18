@@ -17,9 +17,10 @@ export default function InfoSection() {
 
         <p
           className={`${
-            isExpanded1 ? "max-h-full" : "line-clamp-4 overflow-hidden"
+            isExpanded1 ? "max-h-full" : "line-clamp-5 lg:line-clamp-none overflow-hidden"
           } lg:max-h-full lg:overflow-visible`}
         >
+          Nous croyons fermement en l'importance de l'innovation. Notre objectif est de toujours repousser les limites et d'offrir des solutions avant-gardistes qui répondent aux besoins changeants de notre marché. En intégrant les dernières technologies et en encourageant la créativité, nous nous assurons de rester à la pointe de notre secteur.
           Nous croyons fermement en l'importance de l'innovation. Notre objectif est de toujours repousser les limites et d'offrir des solutions avant-gardistes qui répondent aux besoins changeants de notre marché. En intégrant les dernières technologies et en encourageant la créativité, nous nous assurons de rester à la pointe de notre secteur.
           
         </p>
@@ -32,7 +33,7 @@ export default function InfoSection() {
         <h2>Notre mission</h2>
         <p
           className={`${
-            isExpanded2 ? "max-h-full" : "line-clamp-4 overflow-hidden"
+            isExpanded2 ? "max-h-full" : "line-clamp-5 lg:line-clamp-none overflow-hidden"
           } lg:max-h-full lg:overflow-visible`}
         >
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
@@ -50,7 +51,7 @@ export default function InfoSection() {
 
         <p
           className={`${
-            isExpanded3 ? "max-h-full" : "line-clamp-4 overflow-hidden"
+            isExpanded3 ? "max-h-full" : "line-clamp-5 lg:line-clamp-none overflow-hidden"
           } lg:max-h-full lg:overflow-visible`}
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum accusamus
