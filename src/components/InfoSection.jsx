@@ -21,15 +21,13 @@ export default function InfoSection() {
           } lg:max-h-full lg:overflow-visible`}
         >
           Nous croyons fermement en l'importance de l'innovation. Notre objectif est de toujours repousser les limites et d'offrir des solutions avant-gardistes qui répondent aux besoins changeants de notre marché. En intégrant les dernières technologies et en encourageant la créativité, nous nous assurons de rester à la pointe de notre secteur.
-          Nous croyons fermement en l'importance de l'innovation. Notre objectif est de toujours repousser les limites et d'offrir des solutions avant-gardistes qui répondent aux besoins changeants de notre marché. En intégrant les dernières technologies et en encourageant la créativité, nous nous assurons de rester à la pointe de notre secteur.
-          
         </p>
         <button onClick={() => setIsExpanded1(!isExpanded1)}>
           {isExpanded1 ? "Voir moins ▲" : "Voir plus ▼"}
         </button>
       </article>
       <article>
-        <img src="src\assets\images\laptop-svgrepo-com.svg" alt="laptop--v1" />
+        <img src="src/assets/images/laptop-svgrepo-com.svg" alt="laptop--v1" />
         <h2>Notre mission</h2>
         <p
           className={`${
@@ -46,7 +44,7 @@ export default function InfoSection() {
         </button>
       </article>
       <article>
-        <img src="src\assets\images\20sur20.png" alt="" />
+        <img src="src/assets/images/20sur20.png" alt="" />
         <h2>Nos valeurs</h2>
 
         <p

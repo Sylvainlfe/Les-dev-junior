@@ -29,7 +29,7 @@ export default function Nav() {
             }`}
           >
             <img
-              src="src\assets\images\home.png"
+              src="src/assets/images/home.png"
               alt="accueil icon"
               className="h-auto w-5 mr-2 "
             />
@@ -65,7 +65,7 @@ export default function Nav() {
             }`}
           >
             <img
-              src="src\assets\images\contact.png"
+              src="src/assets/images/contact.png"
               alt="contact icon"
               className="h-auto w-5 mr-2"
             />
@@ -73,11 +73,11 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <button class="Btn flex items-center rounded-full w-14 h-14 cursor-pointer relative overflow-hidden transition-all duration-300 shadow-navShadow bg-black">
-            <p class="sign w-full text-2xl text-white transition-all duration-300 ">
+          <button className="Btn flex items-center rounded-full w-14 h-14 cursor-pointer relative overflow-hidden transition-all duration-300 shadow-navShadow bg-black">
+            <p className="sign w-full text-2xl text-white transition-all duration-300 ">
               ©
             </p>
-            <p class="text absolute right-0 w-0 opacity-0 text-white text-lg font-medium transition-all duration-300">
+            <p className="text absolute right-0 w-0 opacity-0 text-white text-lg font-medium transition-all duration-300">
               LesDevJuniors
             </p>
           </button>
@@ -146,7 +146,7 @@ export default function Nav() {
                 className="w-48 p-3 bg-cardTransparent rounded-full shadow-navShadow flex justify-center items-center"
               >
                 <img
-                  src="src\assets\images\realisation-icon.png"
+                  src="src/assets/images/realisation-icon.png"
                   alt=""
                   className="h-auto w-5 mr-2"
                 />
@@ -169,7 +169,7 @@ export default function Nav() {
               </Link>
             </li>
             <li>
-              <button class="w-48 p-3 flex items-center justify-center rounded-full cursor-pointer shadow-navShadow bg-black text-xl">
+              <button className="w-48 p-3 flex items-center justify-center rounded-full cursor-pointer shadow-navShadow bg-black text-xl">
                 © LesDevJuniors
               </button>
             </li>
