@@ -100,7 +100,7 @@ export default function Nav() {
               </svg>
             </label>
           </div>
-          <div className={`drawer-side ${isMenuOpen ? 'block' : 'hidden'}`}>
+          <div className={`drawer-side ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
             <label
               htmlFor="my-drawer"
               aria-label="close sidebar"
