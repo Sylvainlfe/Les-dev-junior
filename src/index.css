@@ -59,7 +59,6 @@ main {
   }
 }
 
-
 .bg-custom {
   background: linear-gradient(216.04deg, #ffffff0f 18.89%, #ffffff03 87.3%);
 }
@@ -122,4 +121,15 @@ main {
   to {
     transform: translateX(var(--end));
   }
+}
+
+.card-image {
+  height: 100px;
+}
+
+.card-body p {
+  color: black;
+}
+.card-title {
+  color: black;
 }
