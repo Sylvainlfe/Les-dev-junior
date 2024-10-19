@@ -1,4 +1,4 @@
-import Projects from "../assets/JSON/Realisations.json"
+import Projects from "../assets/JSON/Realisations.json";
 import ProjectCard from "../components/ProjectCard";
 
 export default function Realisation() {
@@ -11,7 +11,6 @@ export default function Realisation() {
           <ProjectCard key={index} project={project} />
         ))}
       </section>
-      
     </>
   );
 }
