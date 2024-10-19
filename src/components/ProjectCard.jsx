@@ -4,20 +4,14 @@ function ProjectCard({ project }) {
   const { image, titre, description, lien } = project;
   return (
     <>
-      <div className="flex justify-center items-center">
-        <div className="card card-side bg-base-100 shadow-xl flex flex-row items-center max-w-2xl rounded-3xl overflow-hidden">
-          <img className="card-image" src={image} alt="Project visualisation" />
-          <div className="card-body w-1/2 p-4 bg-base-100">
-            <h2 className="card-title">{titre}</h2>
-            <p>{description}</p>
-            <div className="card-actions justify-end">
+      <article className="flex flex-col hover:bg-[#ffffff20] bg-[#ffffff0d] shadow-[0_-1px_0_rgba(255,255,255,0.25)] lg:grid w-80 lg:w-2/3 m-auto items-center overflow-hidden rounded-xl justify-center ">
+          <img className="h-40 pr-5" src={image} alt="Project visualisation" />
+            <h2 className="card-title text-white pb-5">{titre}</h2>
+            <p className="text-slate-400">{description}</p>
               <button className="btn btn-primary">
                 <Link to={lien}>Visiter le site</Link>
               </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      </article>
     </>
   );
 }

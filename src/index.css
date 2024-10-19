@@ -127,13 +127,6 @@ main {
   height: 100px;
 }
 
-.card-body p {
-  color: black;
-}
-.card-title {
-  color: black;
-}
-
 .Btn:hover {
   width: 14rem;
 }
