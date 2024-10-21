@@ -1,6 +1,7 @@
 import Card from "../components/Card";
 import { useRef, useState } from "react";
 import ContactForm from "../components/ContactForm";
+import { sendContactMessage } from "../services/contactService"
 
 const emptyFields = {
   name: "",
@@ -48,7 +49,7 @@ export default function Contact() {
     const newErrors = {};
     fields.forEach((field) => {
       if (field.required && !formValues[field.id]) {
-        newErrors[field.id] = "Ce champ est obligatoire";
+        newErrors[field.id] = "*Ce champ est obligatoire";
       }
     });
     setErrors(newErrors);
@@ -63,9 +64,8 @@ export default function Contact() {
     });
   };
 
-  const webhookURL =
-    "https://discord.com/api/webhooks/1295714093562466344/Hc85RRuMQYnMEVTp-B60d9RXjR_4vvtLL6VHBirUq-E60rkzphDPT5s0pgZCZz3maGbm";
-  const handleSubmit = (event) => {
+  
+  const handleSubmit = async (event) => {
     event.preventDefault();
     if (!validateForm()) {
       alert("Veuillez remplir tous les champs obligatoires.");
@@ -77,31 +77,17 @@ export default function Contact() {
     const email = emailInput.value;
     const message = commentInput.value;
     const name = nameInput.value;
-    const payload = {
-      content: `Nouveau message du portfolio des devs juniors:\nNom et prénom: ${name}\nAdresse email: ${email}\nMessage: ${message}`,
-    };
 
-    fetch(webhookURL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
-      .then((response) => {
-        if (response.ok) {
-          alert("Message envoyé avec succès !");
-          nameInput.value = "";
-          emailInput.value = "";
-          commentInput.value = "";
-        } else {
-          alert("Une erreur est survenue.");
-        }
-      })
-      .catch((error) => {
-        console.error("Erreur:", error);
-        alert("Une erreur est survenue.");
-      });
+    try {
+      await sendContactMessage(name, email, message);
+      alert("Message envoyé avec succès !");
+      nameInput.value = "";
+      emailInput.value = "";
+      commentInput.value = ""; 
+      window.location.reload();
+    } catch (error) {
+      alert("Une erreur est survenue.");
+    }
   };
 
   return (
