@@ -1,72 +1,6 @@
 import Card from "../components/Card";
-import imgFabien from "../assets/images/fabien.webp";
-import imgPaul from "../assets/images/paul.webp";
-import imgSylvain from "../assets/images/sylvain.jfif";
-import imgAlex from "../assets/images/alex.webp";
 import { useRef, useState } from "react";
-import ContactForm from "../components/contactForm";
-
-const titleCard = "Développeur web fullstack";
-
-const personalProfile = [
-  {
-    id: 1,
-    image: imgFabien,
-    title: titleCard,
-    firstname: "Fabien",
-    lastname: "Rollet",
-    description: "Description du projet 1",
-    stack: [
-      "React",
-      "HTML5",
-      "SCSS",
-      "Tailwind",
-      "JavaScript",
-      "NodeJS",
-      "ExpressJS",
-      "MySql",
-    ],
-    github: "https://github.com/FabienRollet",
-    githubName: "Retrouvez moi sur Github ici !",
-    cv: "../Rollet Fabien CV.pdf",
-  },
-  {
-    id: 2,
-    image: imgPaul,
-    title: titleCard,
-    firstname: "Prénom 2",
-    lastname: "Nom 2",
-    description: "Description du projet 2",
-    stack: ["Technologie3", "Technologie4"],
-    github: "lien_vers_github_2",
-    githubName: "Retrouvez moi sur Github",
-    cv: "",
-  },
-  {
-    id: 3,
-    image: imgSylvain,
-    title: titleCard,
-    firstname: "Sylvain",
-    lastname: "Lafaye",
-    description: "Reconversion, ancien chargé d'affaire dans la climatisation.",
-    stack: ["Html", "CSS"],
-    github: "lien_vers_github_3",
-    githubName: "Retrouvez moi sur Github",
-    cv: "../sylvainLafCv.pdf",
-  },
-  {
-    id: 4,
-    image: imgAlex,
-    title: titleCard,
-    firstname: "Alex",
-    lastname: "name",
-    description: "sdfsdfsdf resfsdfs",
-    stack: ["Technologie7", "Technologie8"],
-    github: "lien_vers_github_4",
-    githubName: "Retrouvez moi sur Github",
-    cv: "",
-  },
-];
+import ContactForm from "../components/ContactForm";
 
 const emptyFields = {
   name: "",
@@ -179,7 +113,7 @@ export default function Contact() {
         formValues={formValues}
         errors={errors}
       />
-      <Card personalProfile={personalProfile} />
+      <Card />
     </main>
   );
 }

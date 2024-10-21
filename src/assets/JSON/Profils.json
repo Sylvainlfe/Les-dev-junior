@@ -1,0 +1,92 @@
+[
+    {
+      "id": 1,
+      "image": "src/assets/images/fabien.webp",
+      "title": "Développeur web fullstack",
+      "firstname": "Fabien",
+      "lastname": "Rollet",
+      "description": "Description du projet 1",
+      "stack": [
+        "React",
+        "HTML5",
+        "SCSS",
+        "Tailwind",
+        "JavaScript",
+        "NodeJS",
+        "ExpressJS",
+        "MySql"
+      ],
+      "github": "https://github.com/FabienRollet",
+      "githubName": "Retrouvez mon Github ici !",
+      "cv": "../Rollet Fabien CV.pdf"
+    },
+    {
+      "id": 2,
+      "image": "src/assets/images/sylvain.jfif",
+      "title": "Développeur web fullstack",
+      "firstname": "Sylvain",
+      "lastname": "Lafaye",
+      "description": "Reconversion, ancien chargé d'affaire dans la climatisation.",
+      "stack": [
+        "React",
+        "HTML5",
+        "CSS",
+        "Tailwind",
+        "JavaScript",
+        "NodeJS",
+        "ExpressJS",
+        "MySql",
+        "Next.js",
+        "Typescript"
+      ],
+      "github": "https://github.com/Sylvainlfe",
+      "githubName": "Retrouvez moi sur Github",
+      "cv": "../sylvainLafCv.pdf"
+    },
+    {
+      "id": 3,
+      "image": "src/assets/images/paul.webp",
+      "title": "Développeur web fullstack",
+      "firstname": "Prénom 2",
+      "lastname": "Nom 2",
+      "description": "Description du projet 2",
+      "stack": [
+        "React",
+        "HTML5",
+        "CSS",
+        "Tailwind",
+        "JavaScript",
+        "NodeJS",
+        "ExpressJS",
+        "MySql",
+        "Next.js",
+        "Typescript"
+      ],
+      "github": "",
+      "githubName": "Retrouvez moi sur Github",
+      "cv": ""
+    },
+    {
+      "id": 4,
+      "image": "src/assets/images/alex.webp",
+      "title": "Développeur web fullstack",
+      "firstname": "Alex",
+      "lastname": "name",
+      "description": "sdfsdfsdf resfsdfs",
+      "stack": [
+        "React",
+        "HTML5",
+        "CSS",
+        "Tailwind",
+        "JavaScript",
+        "NodeJS",
+        "ExpressJS",
+        "MySql",
+        "Next.js",
+        "Typescript"
+      ],
+      "github": "lien_vers_github_4",
+      "githubName": "Retrouvez moi sur Github",
+      "cv": ""
+    }
+  ]

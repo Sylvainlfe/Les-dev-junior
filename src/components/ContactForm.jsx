@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function ContactForm({
   handleChangeInputValue,
@@ -62,5 +63,21 @@ function ContactForm({
     </section>
   );
 }
+
+ContactForm.propTypes = {
+  handleChangeInputValue: PropTypes.func.isRequired, 
+  fields: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired, 
+      text: PropTypes.string.isRequired, 
+      required: PropTypes.bool, 
+      type: PropTypes.string.isRequired, 
+      ref: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({ current: PropTypes.any })]), 
+    })
+  ).isRequired, 
+  formValues: PropTypes.objectOf(PropTypes.string).isRequired, 
+  errors: PropTypes.objectOf(PropTypes.string), 
+  handleSubmit: PropTypes.func.isRequired, 
+};
 
 export default ContactForm;

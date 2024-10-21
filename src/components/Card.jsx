@@ -1,6 +1,7 @@
 import React from "react";
+import personalProfile from "../assets/JSON/Profils.json";
 
-function Card({ personalProfile }) {
+function Card() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 pb-24 md:pb-40 lg:h-full">
       {personalProfile.map((profile) => (
