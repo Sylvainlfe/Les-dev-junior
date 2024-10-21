@@ -10,5 +10,11 @@
       "description": "Externatic est un jobboard proposant des offres d'emploi spécifiques et la possibilité de s'inscrire en tant que demandeur d'emploi ou recruteur dans le but de proposer des offres d'emploi qui correspondent à toutes et tous",
       "image": "src/assets/images/page_d'accueil_Externatic.png",
       "lien": "https://0224-js-externatic.bordeaux-jlg.wilders.dev/"
+    },
+    {
+      "titre": "Preflix",
+      "description": "Preflix est une plateforme qui vous aide à trouver n'importe quel film, série ou documentaire, et vous indique sur quelle plateforme vous pouvez le regarder.",
+      "image": "src/assets/images/preflix.png",
+      "lien": "https://preflix.vercel.app/"
     }
 ]
