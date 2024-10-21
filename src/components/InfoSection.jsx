@@ -17,10 +17,16 @@ export default function InfoSection() {
 
         <p
           className={`${
-            isExpanded1 ? "max-h-full" : "line-clamp-5 lg:line-clamp-none overflow-hidden"
-          } lg:max-h-full lg:overflow-visible`}
+            isExpanded1
+              ? "max-h-[500px]"
+              : "max-h-[100px] lg:max-h-full overflow-hidden"
+          } transition-all duration-300 lg:max-h-full lg:overflow-visible`}
         >
-          Nous croyons fermement en l'importance de l'innovation. Notre objectif est de toujours repousser les limites et d'offrir des solutions avant-gardistes qui répondent aux besoins changeants de notre marché. En intégrant les dernières technologies et en encourageant la créativité, nous nous assurons de rester à la pointe de notre secteur.
+          Nous croyons fermement en l'importance de l'innovation. Notre objectif
+          est de toujours repousser les limites et d'offrir des solutions
+          avant-gardistes qui répondent aux besoins changeants de notre marché.
+          En intégrant les dernières technologies et en encourageant la
+          créativité, nous nous assurons de rester à la pointe de notre secteur.
         </p>
         <button onClick={() => setIsExpanded1(!isExpanded1)}>
           {isExpanded1 ? "Voir moins ▲" : "Voir plus ▼"}
@@ -31,8 +37,10 @@ export default function InfoSection() {
         <h2>Notre mission</h2>
         <p
           className={`${
-            isExpanded2 ? "max-h-full" : "line-clamp-5 lg:line-clamp-none overflow-hidden"
-          } lg:max-h-full lg:overflow-visible`}
+            isExpanded2
+            ? "max-h-[500px]"
+            : "max-h-[100px] lg:max-h-full overflow-hidden"
+        } transition-all duration-300 lg:max-h-full lg:overflow-visible`}
         >
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
           quisquam velit cum unde nam rerum nihil, consequuntur molestiae
@@ -49,8 +57,10 @@ export default function InfoSection() {
 
         <p
           className={`${
-            isExpanded3 ? "max-h-full" : "line-clamp-5 lg:line-clamp-none overflow-hidden"
-          } lg:max-h-full lg:overflow-visible`}
+            isExpanded3
+            ? "max-h-[500px]"
+            : "max-h-[100px] lg:max-h-full overflow-hidden"
+        } transition-all duration-300 lg:max-h-full lg:overflow-visible`}
         >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum accusamus
           omnis laudantium excepturi, esse doloribus nesciunt perspiciatis
