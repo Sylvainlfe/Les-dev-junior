@@ -7,7 +7,7 @@
     },
     {
       "titre": "Externatic",
-      "description": "Externatic est un jobboard proposant des offres d'emploi spécifiques et la possibilité de s'inscrire en tant que demandeur d'emploi ou de recruteur dans le but de proposer des offres d'emploi qui correspondent à toutes et tous",
+      "description": "Externatic est un jobboard proposant des offres d'emploi spécifiques et la possibilité de s'inscrire en tant que demandeur d'emploi ou recruteur dans le but de proposer des offres d'emploi qui correspondent à toutes et tous",
       "image": "src/assets/images/page_d'accueil_Externatic.png",
       "lien": "https://0224-js-externatic.bordeaux-jlg.wilders.dev/"
     }
