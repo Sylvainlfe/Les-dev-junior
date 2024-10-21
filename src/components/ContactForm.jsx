@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function ContactForm({
   handleChangeInputValue,
@@ -8,12 +9,17 @@ function ContactForm({
   errors,
   handleSubmit,
 }) {
-  
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+
+  const handleRecaptchaChange = (token) => {
+    setRecaptchaToken(token);
+  };
+
   return (
     <section className="flex justify-center items-center h-lvh">
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col justify-evenly bg-cardTransparent shadow-contactShadow rounded-lg px-6 w-80 h-2/3 md:gap-4 md:w-2/3 md:h-3/4 lg:w-3/5 lg:px-20"
+        className="flex flex-col justify-center bg-cardTransparent shadow-contactShadow rounded-2xl px-6 w-80 h-4/5 gap-2 md:gap-4 md:w-2/3 md:h-1/2 lg:w-3/5 lg:h-3/4 lg:p-20 lg:gap-2"
       >
         <h2 className="self-center text-2xl">Nous contacter</h2>
         {fields.map((field) => (
@@ -53,6 +59,12 @@ function ContactForm({
             )}
           </fieldset>
         ))}
+        <div className="flex justify-center">
+          <ReCAPTCHA
+            sitekey="YOUR_RECAPTCHA_SITE_KEY"
+            onChange={handleRecaptchaChange}
+          />
+        </div>
         <button
           type="submit"
           className="border-2 border-white/30 rounded-full py-2 px-4 w-full cursor-pointer hover:bg-custom-gradients lg-mb-4"
@@ -65,19 +77,22 @@ function ContactForm({
 }
 
 ContactForm.propTypes = {
-  handleChangeInputValue: PropTypes.func.isRequired, 
+  handleChangeInputValue: PropTypes.func.isRequired,
   fields: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired, 
-      text: PropTypes.string.isRequired, 
-      required: PropTypes.bool, 
-      type: PropTypes.string.isRequired, 
-      ref: PropTypes.oneOfType([PropTypes.func, PropTypes.shape({ current: PropTypes.any })]), 
+      id: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+      required: PropTypes.bool,
+      type: PropTypes.string.isRequired,
+      ref: PropTypes.oneOfType([
+        PropTypes.func,
+        PropTypes.shape({ current: PropTypes.any }),
+      ]),
     })
-  ).isRequired, 
-  formValues: PropTypes.objectOf(PropTypes.string).isRequired, 
-  errors: PropTypes.objectOf(PropTypes.string), 
-  handleSubmit: PropTypes.func.isRequired, 
+  ).isRequired,
+  formValues: PropTypes.objectOf(PropTypes.string).isRequired,
+  errors: PropTypes.objectOf(PropTypes.string),
+  handleSubmit: PropTypes.func.isRequired,
 };
 
 export default ContactForm;
