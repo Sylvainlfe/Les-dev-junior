@@ -2,17 +2,21 @@ import Card from "../components/Card";
 import { useRef, useState } from "react";
 import ContactForm from "../components/ContactForm";
 import { sendContactMessage } from "../services/contactService"
+import DOMPurify from "dompurify";
+
 
 const emptyFields = {
   name: "",
   email: "",
   comment: "",
+  honeypot:"",
 };
 
 export default function Contact() {
   const nameRef = useRef();
   const emailRef = useRef();
   const commentRef = useRef();
+  const honeypotRef = useRef();
 
   const textLabel = [
     {
@@ -39,11 +43,28 @@ export default function Contact() {
       text: "Message",
       ref: commentRef,
     },
+    {
+      required: false,
+      type: "text",
+      id: "honeypot",
+      for: "honeypot",
+      text: "",
+      ref: honeypotRef,
+    },
   ];
 
   const [formValues, setFormValues] = useState(emptyFields);
   const [fields, setFields] = useState(textLabel);
   const [errors, setErrors] = useState({});
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+
+  const handleRecaptchaChange = (token) => {
+    setRecaptchaToken(token);
+  };
+
+  const lastSubmissionTime = localStorage.getItem("lastSubmissionTime");
+  const currentTime = new Date().getTime();
+  const RATE_LIMIT_DURATION = 60000;
 
   const validateForm = () => {
     const newErrors = {};
@@ -67,23 +88,34 @@ export default function Contact() {
   
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (lastSubmissionTime && currentTime - lastSubmissionTime < RATE_LIMIT_DURATION) {
+      alert("Vous devez attendre 1 minute avant de soumettre un nouveau message.");
+      return;
+    }
     if (!validateForm()) {
       alert("Veuillez remplir tous les champs obligatoires.");
       return;
     }
-    const emailInput = document.getElementById("email");
-    const commentInput = document.getElementById("comment");
-    const nameInput = document.getElementById("name");
-    const email = emailInput.value;
-    const message = commentInput.value;
-    const name = nameInput.value;
+    if (formValues.honeypot) {
+      console.log("Bot detected. Submission blocked.");
+      return;
+    }
+    // const emailInput = document.getElementById("email");
+    // const commentInput = document.getElementById("comment");
+    // const nameInput = document.getElementById("name");
+    // const email = emailInput.value;
+    // const message = commentInput.value;
+    // const name = nameInput.value;
+    const cleanName = DOMPurify.sanitize(formValues.name);
+    const cleanEmail = DOMPurify.sanitize(formValues.email);
+    const cleanComment = DOMPurify.sanitize(formValues.comment);
 
     try {
-      await sendContactMessage(name, email, message);
+      await sendContactMessage(cleanName, cleanEmail, cleanComment);
       alert("Message envoyé avec succès !");
-      nameInput.value = "";
-      emailInput.value = "";
-      commentInput.value = ""; 
+      
+      setFormValues(emptyFields);
+      localStorage.setItem("lastSubmissionTime", currentTime); 
       window.location.reload();
     } catch (error) {
       alert("Une erreur est survenue.");
@@ -98,6 +130,7 @@ export default function Contact() {
         fields={fields}
         formValues={formValues}
         errors={errors}
+        handleRecaptchaChange={handleRecaptchaChange}
       />
       <Card />
     </main>

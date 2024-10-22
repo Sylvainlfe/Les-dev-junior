@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -8,12 +8,9 @@ function ContactForm({
   formValues,
   errors,
   handleSubmit,
+  handleRecaptchaChange,
 }) {
-  const [recaptchaToken, setRecaptchaToken] = useState(null);
-
-  const handleRecaptchaChange = (token) => {
-    setRecaptchaToken(token);
-  };
+  
 
   return (
     <section className="flex justify-center items-center h-lvh">
@@ -23,7 +20,7 @@ function ContactForm({
       >
         <h2 className="self-center text-2xl">Nous contacter</h2>
         {fields.map((field) => (
-          <fieldset key={field.id} className="">
+          <fieldset key={field.id} className={field.id === "honeypot" ? "hidden" : ""}>
             <label htmlFor={field.id} className="text-white">
               {field.text}{" "}
               {field.required && <span className="text-red-500">*</span>}
@@ -77,22 +74,23 @@ function ContactForm({
 }
 
 ContactForm.propTypes = {
-  handleChangeInputValue: PropTypes.func.isRequired,
+  handleChangeInputValue: PropTypes.func.isRequired,  
   fields: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired,
-      required: PropTypes.bool,
-      type: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,  
+      text: PropTypes.string.isRequired, 
+      required: PropTypes.bool,  
+      type: PropTypes.string.isRequired,  
       ref: PropTypes.oneOfType([
         PropTypes.func,
         PropTypes.shape({ current: PropTypes.any }),
-      ]),
+      ]),  
     })
   ).isRequired,
-  formValues: PropTypes.objectOf(PropTypes.string).isRequired,
-  errors: PropTypes.objectOf(PropTypes.string),
-  handleSubmit: PropTypes.func.isRequired,
+  formValues: PropTypes.objectOf(PropTypes.string).isRequired, 
+  errors: PropTypes.objectOf(PropTypes.string),  
+  handleSubmit: PropTypes.func.isRequired,  
+  handleRecaptchaChange: PropTypes.func.isRequired,  
 };
 
 export default ContactForm;
