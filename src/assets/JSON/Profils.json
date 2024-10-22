@@ -26,7 +26,7 @@
       "title": "Développeur web fullstack",
       "firstname": "Sylvain",
       "lastname": "Lafaye",
-      "description": "Reconversion, ancien chargé d'affaire dans la climatisation.",
+      "description": "Ancien chargé d'affaire dans la climatisation, en reconversion pour devenir développeur web.",
       "stack": [
         "React",
         "HTML5",
@@ -47,9 +47,9 @@
       "id": 3,
       "image": "images/paul.webp",
       "title": "Développeur web fullstack",
-      "firstname": "Prénom 2",
-      "lastname": "Nom 2",
-      "description": "Description du projet 2",
+      "firstname": "Paul",
+      "lastname": "Boury",
+      "description": "Développeur web en devenir",
       "stack": [
         "React",
         "HTML5",
@@ -62,7 +62,7 @@
         "Next.js",
         "Typescript"
       ],
-      "github": "",
+      "github": "https://github.com/PaulBOURY",
       "githubName": "Retrouvez moi sur Github",
       "cv": ""
     },
@@ -70,9 +70,9 @@
       "id": 4,
       "image": "images/alex.webp",
       "title": "Développeur web fullstack",
-      "firstname": "Alex",
-      "lastname": "name",
-      "description": "sdfsdfsdf resfsdfs",
+      "firstname": "Alexandre",
+      "lastname": "Moro",
+      "description": "Développeur web en devenir",
       "stack": [
         "React",
         "HTML5",
@@ -85,7 +85,7 @@
         "Next.js",
         "Typescript"
       ],
-      "github": "lien_vers_github_4",
+      "github": "https://github.com/lxndrMr",
       "githubName": "Retrouvez moi sur Github",
       "cv": ""
     }

@@ -78,7 +78,7 @@ export default function Nav() {
               ©
             </p>
             <p className="text absolute right-0 w-0 opacity-0 text-white text-lg font-medium transition-all pl-[19px] duration-300">
-              LesDevJuniors
+              LesDevsJuniors
             </p>
           </Link>
         </li>
@@ -170,7 +170,7 @@ export default function Nav() {
             </li>
             <li>
               <button className="w-48 p-3 flex items-center justify-center rounded-full cursor-pointer shadow-navShadow bg-black text-xl">
-                © LesDevJuniors
+                © LesDevsJuniors
               </button>
             </li>
           </ul>
