@@ -100,12 +100,6 @@ export default function Contact() {
       console.log("Bot detected. Submission blocked.");
       return;
     }
-    // const emailInput = document.getElementById("email");
-    // const commentInput = document.getElementById("comment");
-    // const nameInput = document.getElementById("name");
-    // const email = emailInput.value;
-    // const message = commentInput.value;
-    // const name = nameInput.value;
     const cleanName = DOMPurify.sanitize(formValues.name);
     const cleanEmail = DOMPurify.sanitize(formValues.email);
     const cleanComment = DOMPurify.sanitize(formValues.comment);

@@ -16,11 +16,13 @@ function ContactForm({
     <section className="flex justify-center items-center h-lvh">
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col justify-center bg-cardTransparent shadow-contactShadow rounded-2xl px-6 w-80 h-4/5 gap-2 md:gap-4 md:w-2/3 md:h-1/2 lg:w-3/5 lg:h-3/4 lg:p-20 lg:gap-2"
+        className="flex flex-col justify-center bg-cardTransparent shadow-contactShadow rounded-3xl w-80 px-12 py-6 h-auto gap-2 md:w-2/3 md:gap-4 lg:w-3/5 lg:gap-2 lg:px-32 lg:py-10 xl:w-1/2 "
       >
-        <h2 className="self-center text-2xl">Nous contacter</h2>
+        <h2 className="text-center text-2xl">Nous contacter</h2>
         {fields.map((field) => (
-          <fieldset key={field.id} className={field.id === "honeypot" ? "hidden" : ""}>
+          <fieldset key={field.id} className={`${
+            field.id === "honeypot" ? "hidden" : ""
+          }`}>
             <label htmlFor={field.id} className="text-white">
               {field.text}{" "}
               {field.required && <span className="text-red-500">*</span>}
@@ -60,6 +62,7 @@ function ContactForm({
           <ReCAPTCHA
             sitekey="YOUR_RECAPTCHA_SITE_KEY"
             onChange={handleRecaptchaChange}
+            theme="dark"
           />
         </div>
         <button

@@ -7,7 +7,7 @@ function Card() {
       {personalProfile.map((profile) => (
         <article
           key={profile.id}
-          className="card w-80 h-2/3 md:card md:card-side md:w-2/3 md:h-auto lg:w-3/5 bg-cardTransparent shadow-contactShadow"
+          className="card w-80 h-2/3 md:card md:card-side md:w-2/3 md:h-auto lg:w-3/5 bg-cardTransparent shadow-contactShadow xl:w-1/2"
         >
           <figure>
             <img
