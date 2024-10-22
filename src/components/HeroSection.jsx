@@ -22,7 +22,7 @@ export default function HeroSection() {
             </span>
           </Link>
         </article>
-        <img src="src\assets\images\mockup.png" className="lg:absolute lg:left-2/3" alt="image d'un écran d'ordinateur" />
+        <img src="images\mockup.png" className="lg:absolute lg:left-2/3" alt="image d'un écran d'ordinateur" />
       </section>
   )
 }

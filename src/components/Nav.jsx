@@ -29,7 +29,7 @@ export default function Nav() {
             }`}
           >
             <img
-              src="src/assets/images/home.png"
+              src="images/home.png"
               alt="accueil icon"
               className="h-auto w-5 mr-2 "
             />
@@ -47,7 +47,7 @@ export default function Nav() {
             }`}
           >
             <img
-              src="src/assets/images/realisation-icon.png"
+              src="images/realisation-icon.png"
               alt="realisation icon"
               className="h-auto w-5 mr-2"
             />
@@ -65,7 +65,7 @@ export default function Nav() {
             }`}
           >
             <img
-              src="src/assets/images/contact.png"
+              src="images/contact.png"
               alt="contact icon"
               className="h-auto w-5 mr-2"
             />
@@ -146,7 +146,7 @@ export default function Nav() {
                 className="w-48 p-3 bg-cardTransparent rounded-full shadow-navShadow flex justify-center items-center"
               >
                 <img
-                  src="src/assets/images/realisation-icon.png"
+                  src="images/realisation-icon.png"
                   alt=""
                   className="h-auto w-5 mr-2"
                 />
