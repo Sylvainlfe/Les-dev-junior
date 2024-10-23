@@ -60,7 +60,7 @@ function ContactForm({
         ))}
         <div className="flex justify-center">
           <ReCAPTCHA
-            sitekey="YOUR_RECAPTCHA_SITE_KEY"
+            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
             onChange={handleRecaptchaChange}
             theme="dark"
           />

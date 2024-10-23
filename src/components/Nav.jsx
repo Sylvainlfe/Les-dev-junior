@@ -73,7 +73,10 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link to="/copyright" className="Btn flex items-center rounded-full w-14 h-14 cursor-pointer relative overflow-hidden pl-[19px] transition-all duration-300 shadow-navShadow bg-black">
+          <Link
+            to="/copyright"
+            className="Btn flex items-center rounded-full w-14 h-14 cursor-pointer relative overflow-hidden pl-[19px] transition-all duration-300 shadow-navShadow bg-black"
+          >
             <p className="sign w-full text-2xl text-white transition-all duration-300 ">
               ©
             </p>
@@ -169,9 +172,15 @@ export default function Nav() {
               </Link>
             </li>
             <li>
-              <button className="w-48 p-3 flex items-center justify-center rounded-full cursor-pointer shadow-navShadow bg-black text-xl">
-                © LesDevsJuniors
-              </button>
+              <Link
+                to="/copyright"
+                aria-label="copyright"
+                onClick={handleCloseMenu}
+              >
+                <button className="w-48 p-3 flex items-center justify-center rounded-full cursor-pointer shadow-navShadow bg-black text-xl">
+                  © LesDevsJuniors
+                </button>
+              </Link>
             </li>
           </ul>
         </div>
