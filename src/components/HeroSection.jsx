@@ -10,7 +10,7 @@ export default function HeroSection() {
           </p>
           <p className="text-xl text-wrap md:text-3xl lg:text-2xl">
             Touchez un nouveau public avec
-            <span className="font-bold "> votre propre site internet !</span>
+            <span className="font-bold "> votre propre site internet !!</span>
           </p>
           <Link
             to="/contact"
