@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ReCAPTCHA from "react-google-recaptcha";
 
 function ContactForm({
   handleChangeInputValue,
@@ -8,7 +7,6 @@ function ContactForm({
   formValues,
   errors,
   handleSubmit,
-  handleRecaptchaChange,
 }) {
   
 
@@ -58,13 +56,7 @@ function ContactForm({
             )}
           </fieldset>
         ))}
-        <div className="flex justify-center">
-          <ReCAPTCHA
-            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-            onChange={handleRecaptchaChange}
-            theme="dark"
-          />
-        </div>
+        
         <button
           type="submit"
           className="border-2 border-white/30 rounded-full py-2 px-4 w-full h-12 cursor-pointer hover:bg-custom-gradients lg-mb-4"
@@ -92,8 +84,7 @@ ContactForm.propTypes = {
   ).isRequired,
   formValues: PropTypes.objectOf(PropTypes.string).isRequired, 
   errors: PropTypes.objectOf(PropTypes.string),  
-  handleSubmit: PropTypes.func.isRequired,  
-  handleRecaptchaChange: PropTypes.func.isRequired,  
+  handleSubmit: PropTypes.func.isRequired,   
 };
 
 export default ContactForm;

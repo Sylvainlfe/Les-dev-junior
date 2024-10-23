@@ -56,11 +56,7 @@ export default function Contact() {
   const [formValues, setFormValues] = useState(emptyFields);
   const [fields, setFields] = useState(textLabel);
   const [errors, setErrors] = useState({});
-  const [recaptchaToken, setRecaptchaToken] = useState(null);
-
-  const handleRecaptchaChange = (token) => {
-    setRecaptchaToken(token);
-  };
+  
 
   const lastSubmissionTime = localStorage.getItem("lastSubmissionTime");
   const currentTime = new Date().getTime();
@@ -124,7 +120,6 @@ export default function Contact() {
         fields={fields}
         formValues={formValues}
         errors={errors}
-        handleRecaptchaChange={handleRecaptchaChange}
       />
       <Card />
     </main>
